@@ -1,0 +1,112 @@
+{
+    "works" : [
+        {
+            "id" : 1,
+            "icon_name": "icon fas fa-link fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        },
+        {
+            "id" : 2,
+            "icon_name": "icon fa fa-bolt fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        },
+        {
+            "id" : 3,
+            "icon_name": "icon fa fa-tachometer fa-2x",
+            "title": "Mobile Ux",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos omnis voluptas ea ipsam! Voluptas."
+        }
+    ],
+
+    "portfolio" : [
+        {
+            "id":1,
+            "image": "./images/Portfolio/portfolio-img1.jpg",
+            "category":["html","wordpress","mobile"]
+        },
+        {
+            "id":2,
+            "image": "./images/Portfolio/portfolio-img2.jpg",
+            "category":["html","photoshop"]
+        },
+        {
+            "id":3,
+            "image": "./images/Portfolio/portfolio-img3.jpg",
+            "category":["html","wordpress"]
+
+        },
+        {
+            "id":4,
+            "image": "./images/Portfolio/portfolio-img4.jpg",
+            "category":["html","mobile"]
+
+        },
+        {
+            "id":5,
+            "image": "./images/Portfolio/portfolio-img5.jpg",
+            "category":["html","mobile","wordpress","photoshop" ]
+        },
+        {
+            "id":6,
+            "image": "./images/Portfolio/portfolio-img6.jpg",
+            "category":["mobile","wordpress","photoshop" ]
+
+        },
+        {
+            "id":7,
+            "image": "./images/Portfolio/portfolio-img4.jpg",
+            "category":["wordpress","photoshop" ]
+
+        },
+        {
+            "id":8,
+            "image": "./images/Portfolio/portfolio-img8.jpg",
+            "category":["wordpress","mobile" ]
+        }
+    ] ,
+    "social" : [
+        {
+            "id": 1,
+            "icon" : "icon fa fa-facebook fa-lg",
+            "title" : "Follow Me on",
+            "body" : "Social Facebook",
+            "background" : "#3b5998"
+        },
+        {
+            "id": 2,
+            "icon" : "icon fa fa-twitter fa-lg",
+            "title" : "Tweet Me on",
+            "body" : "Social twitter",
+            "background" : "#498cbf"
+
+        },
+        {
+            "id": 3,
+            "icon" : "icon fa fa-pinterest fa-lg",
+            "title" : "Pin Me on",
+            "body" : "Social Pinterest",
+            "background" : "#cc2127"
+
+        }
+    ] ,
+    "profile" :[
+        {
+            "id":1,
+            "title": "Bootstrap",
+            "persentage":"100%"
+        },
+        {
+            "id":1,
+            "title": "CSS",
+            "persentage":"80%"
+        },
+        {
+            "id":1,
+            "title": "HTML",
+            "persentage":"50%"
+        }
+        
+    ]
+}
