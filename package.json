@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/Mona90/Ultra.git",
   "name": "ultra",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

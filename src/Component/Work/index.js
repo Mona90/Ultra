@@ -10,7 +10,6 @@ class Work extends Component {
     }
     componentDidMount(){
         axios.get('data/data.json').then(res =>{
-            console.log(res)
             this.setState({
                 works : res.data.works
             })

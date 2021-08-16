@@ -10,11 +10,10 @@ import Contact from './Pages/Contact';
 class App extends Component{
   render(){
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/Ultra">
        <Navbar/>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact}/>
-       
        <Footer/>
 
       </BrowserRouter>

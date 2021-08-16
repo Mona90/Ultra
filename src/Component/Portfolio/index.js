@@ -12,8 +12,8 @@ function Portfolio() {
        })
 
     },[])
-    const handleClick  = (e)=>{
-        console.log(e.target.category)
+    const handleClick  = (category)=>{
+        console.log(category)
 
     }
 
@@ -34,11 +34,11 @@ function Portfolio() {
         <Section>
             <Title><TitleSpan>My</TitleSpan> Portfolio</Title>
             <List>
-                <ListItem active category={"all"} onClick={handleClick}>All</ListItem>
-                <ListItem category={"html" }onClick={handleClick}>HTML</ListItem>
-                <ListItem category={"photoshop" }onClick={handleClick}>Photoshop</ListItem>
-                <ListItem category="wordpress" onClick={handleClick}>Wordpress</ListItem>
-                <ListItem category="mobile" onClick={handleClick}>Mobile</ListItem>
+                <ListItem active onClick={() => handleClick('all')}>All</ListItem>
+                <ListItem  onClick={() => handleClick("html" )}>HTML</ListItem>
+                <ListItem  onClick={() => handleClick("photoshop")}>Photoshop</ListItem>
+                <ListItem  onClick={() => handleClick("wordpress")}>Wordpress</ListItem>
+                <ListItem  onClick={() => handleClick("mobile")}>Mobile</ListItem>
             </List>
             
             <div className="box">
