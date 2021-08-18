@@ -1,34 +1,37 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Section, Title, TitleSpan, List, ListItem, BoxDev, Img, Overlay, BoxSpan } from './style.js'
-// import Data from 'data/data.json'
+
+
 
 function Portfolio() {
     const [Images, setImages] = useState([])
+    const [filter, setFilter] = useState('all');
+    
     useEffect(()=>{
        axios.get('data/data.json').then(res =>{
 
-           setImages(res.data.portfolio)
+        setImages(res.data.portfolio)
        })
 
     },[])
-    const handleClick  = (category)=>{
-        console.log(category)
-
+    const handleClick  = (categoryName)=>{
+        setFilter(categoryName);
     }
-
-    const portfolioImages = Images.map(item =>{
-        return(
-                <BoxDev key={item.id}>
-                    <Img src={item.image} alt=""/>
-                    <Overlay>
-                        <BoxSpan>
-                            Show Image
-                        </BoxSpan>
-                    </Overlay>
-                </BoxDev>
-        )
-    })
+    
+    
+    const portfolioImages = (filter === 'all' ? Images : Images.filter(img => img.category.includes(filter))).map((item, i)=>{
+              return(
+                  <BoxDev key={i}>
+                      <Img src={item.image} alt=""/>
+                      <Overlay>
+                          <BoxSpan>
+                              Show Image
+                          </BoxSpan>
+                      </Overlay>
+                  </BoxDev>
+            )
+         })
     
     return (
         <Section>
@@ -43,6 +46,7 @@ function Portfolio() {
             
             <div className="box">
                 {portfolioImages}
+                
             </div>
             
         </Section>

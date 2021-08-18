@@ -25,7 +25,8 @@ export const ListItem = styled.li
   width: 100px;
   padding: 10px;
   background: ${props => props.active ? "#eb5424" : ""};
-  color:${props => props.active ? "#FFF" : "#000"}
+  color:${props => props.active ? "#FFF" : "#000"};
+  cursor:pointer
   `
 
 
