@@ -26,7 +26,11 @@ export const ListItem = styled.li
   padding: 10px;
   background: ${props => props.active ? "#eb5424" : ""};
   color:${props => props.active ? "#FFF" : "#000"};
-  cursor:pointer
+  cursor:pointer;
+  text-transform:capitalize;
+  &.active{
+    color:red
+  }
   `
 
 

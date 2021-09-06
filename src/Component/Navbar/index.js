@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import './style.css'
 function Navbar() {
     return (
@@ -14,12 +14,12 @@ function Navbar() {
     
                 
                 <ul className="ul-list">
-                    <li className="list-item"><Link to="/">Home</Link></li>
-                    <li className="list-item"><Link to="#">Work</Link></li>
-                    <li className="list-item"><Link to="#">Portfolio</Link></li>
-                    <li className="list-item"><Link to="#">Resume</Link></li>
-                    <li className="list-item"><Link to="#">About</Link></li>
-                    <li className="list-item"><Link to="/contact">Contact</Link></li>
+                    <li className="list-item"><NavLink exact to="/" activeStyle={{ color:'red' }}>Home</NavLink></li>
+                    <li className="list-item"><NavLink to="#">Work</NavLink></li>
+                    <li className="list-item"><NavLink to="#">Portfolio</NavLink></li>
+                    <li className="list-item"><NavLink to="#">Resume</NavLink></li>
+                    <li className="list-item"><NavLink to="#">About</NavLink></li>
+                    <li className="list-item"><NavLink to="/contact" activeStyle={{ color:'red' }}>Contact</NavLink></li>
                 </ul>
                 
             </div>

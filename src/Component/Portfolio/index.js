@@ -7,7 +7,8 @@ import {Section, Title, TitleSpan, List, ListItem, BoxDev, Img, Overlay, BoxSpan
 function Portfolio() {
     const [Images, setImages] = useState([])
     const [filter, setFilter] = useState('all');
-    
+    const array = ["all", "html", "photoshop", "wordpress", "mobile"]
+    const [activeIndex, setActiveIndex] = useState(0)
     useEffect(()=>{
        axios.get('data/data.json').then(res =>{
 
@@ -15,11 +16,11 @@ function Portfolio() {
        })
 
     },[])
-    const handleClick  = (categoryName)=>{
-        setFilter(categoryName);
+    const handleClick  = (obj, index)=>{
+        setFilter(obj);
+        setActiveIndex(index)
     }
-    
-    
+  
     const portfolioImages = (filter === 'all' ? Images : Images.filter(img => img.category.includes(filter))).map((item, i)=>{
               return(
                   <BoxDev key={i}>
@@ -32,16 +33,19 @@ function Portfolio() {
                   </BoxDev>
             )
          })
-    
+
     return (
         <Section>
             <Title><TitleSpan>My</TitleSpan> Portfolio</Title>
             <List>
-                <ListItem active onClick={() => handleClick('all')}>All</ListItem>
-                <ListItem  onClick={() => handleClick("html" )}>HTML</ListItem>
-                <ListItem  onClick={() => handleClick("photoshop")}>Photoshop</ListItem>
-                <ListItem  onClick={() => handleClick("wordpress")}>Wordpress</ListItem>
-                <ListItem  onClick={() => handleClick("mobile")}>Mobile</ListItem>
+                {array.map((obj, index) => {
+                    
+                    return(
+                        <ListItem className={index === activeIndex  ? 'active' : ''} onClick={() => {handleClick(obj, index)}} key={index}>{obj}</ListItem>
+                    )
+                   
+                })}
+                
             </List>
             
             <div className="box">
