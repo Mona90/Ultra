@@ -125,7 +125,7 @@ class GoogleMaps extends React.Component {
   render() { 
     
     return (
-      <div>
+      <div style={{height:'100vh'}}>
         <p className="text-center" style={{marginTop:'50px'}}>Please drag the marker to change address in the input</p>
         <input type="text" value={this.state.address} style={{width:"50%",margin:'20px auto', display:'block'}}/>
         {this.state.error ? 
