@@ -3,7 +3,9 @@ import styled from 'styled-components'
 export const Section = styled.div  
   `background: #f8f8f8;
   padding:50px 0;
-  overflow: hidden;`
+  overflow: hidden;
+  min-height: 700px;
+  `
 
 
 export const Title = styled.h2 
