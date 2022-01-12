@@ -7,17 +7,18 @@ import Footer from './Component/Footer';
 import Contact from './Pages/Contact';
 import Portfolio from './Component/Portfolio';
 import Map from './Pages/Map';
-
+import Login from './Pages/Login';
 
 class App extends Component{
   render(){
     return (
       <BrowserRouter>
        <Navbar/>
-            <Route exact path="/" component={Home} />
-            <Route path="/contact" component={Contact}/>
-            <Route path="/portfolio" component={Portfolio}/>
-            <Route path="/map" component={Map}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/contact" component={Contact}/>
+        <Route path="/portfolio" component={Portfolio}/>
+        <Route path="/map" component={Map}/>
+        <Route path="/login" component={Login}/>
        <Footer/>
 
       </BrowserRouter>

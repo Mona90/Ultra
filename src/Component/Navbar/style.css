@@ -6,10 +6,10 @@
   border-bottom: 1px solid #000;
 }
 
-.navbar .logo {
+/* .navbar .logo {
   width: 50%;
   float: left;
-}
+} */
 
 .navbar .logo .logo-text {
   font-size: 30px;
@@ -21,10 +21,11 @@
 }
 
 .navbar .ul-list {
-  width: 50%;
-  float: left;
+  /* width: 50%;
+  float: left; */
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .navbar .ul-list .list-item {
@@ -40,5 +41,15 @@
 }
 
 .navbar .ul-list .list-item a:hover {
+  color: #eb5424;
+}
+.navbar .nav {
+  width: 70%;
+}
+/* .navbar .login {
+  border: 1px solid #000;
+} */
+.navbar .login svg {
+  font-size: 25px;
   color: #eb5424;
 }
